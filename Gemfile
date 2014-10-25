@@ -9,8 +9,9 @@ group :development do
   gem 'sqlite3'
 end
 
-gem 'pg'
-
+group :production do
+  gem 'pg'
+end
 
 gem 'social_stream', git: 'git://github.com/ging/social_stream.git', branch: 'master'
 
@@ -18,7 +19,7 @@ gem 'social_stream', git: 'git://github.com/ging/social_stream.git', branch: 'ma
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass', '3.2.13'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
