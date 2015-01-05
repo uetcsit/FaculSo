@@ -7,6 +7,7 @@ gem 'rails', '3.2.19'
 
 group :development do
   gem 'sqlite3'
+  gem "rails-erd"
 end
 
 group :production do

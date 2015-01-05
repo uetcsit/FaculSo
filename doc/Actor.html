@@ -1,0 +1,1906 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Actor - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">ActiveRecord::Base
+  
+</div>
+
+    <div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">SocialStream::Models::Object</span>
+  
+  
+  </ul>
+</div>
+
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-action_to">#action_to</a>
+    
+    <li ><a href="#method-i-action_to-21">#action_to!</a>
+    
+    <li ><a href="#method-i-activity_relation_ids">#activity_relation_ids</a>
+    
+    <li ><a href="#method-i-activity_relations">#activity_relations</a>
+    
+    <li ><a href="#method-i-activity_relations_for">#activity_relations_for</a>
+    
+    <li ><a href="#method-i-activity_relations_for-3F">#activity_relations_for?</a>
+    
+    <li ><a href="#method-i-allow-3F">#allow?</a>
+    
+    <li ><a href="#method-i-as_json">#as_json</a>
+    
+    <li ><a href="#method-i-as_object_type">#as_object_type</a>
+    
+    <li ><a href="#method-i-can_comment-3F">#can_comment?</a>
+    
+    <li ><a href="#method-i-comment_relations">#comment_relations</a>
+    
+    <li ><a href="#method-i-common_contacts_count">#common_contacts_count</a>
+    
+    <li ><a href="#method-i-contact_actors">#contact_actors</a>
+    
+    <li ><a href="#method-i-contact_subjects">#contact_subjects</a>
+    
+    <li ><a href="#method-i-contact_to">#contact_to</a>
+    
+    <li ><a href="#method-i-contact_to-21">#contact_to!</a>
+    
+    <li ><a href="#method-i-ego_contact">#ego_contact</a>
+    
+    <li ><a href="#method-i-egocentric_ties">#egocentric_ties</a>
+    
+    <li ><a href="#method-i-following_actor_and_self_ids">#following_actor_and_self_ids</a>
+    
+    <li ><a href="#method-i-following_actor_ids">#following_actor_ids</a>
+    
+    <li ><a href="#method-i-following_actor_objects">#following_actor_objects</a>
+    
+    <li ><a href="#method-i-mailboxer_email">#mailboxer_email</a>
+    
+    <li class="calls-super" ><a href="#method-i-notification_settings">#notification_settings</a>
+    
+    <li ><a href="#method-i-options_for_contact_select">#options_for_contact_select</a>
+    
+    <li ><a href="#method-i-options_for_contact_select_simple-3F">#options_for_contact_select_simple?</a>
+    
+    <li ><a href="#method-i-options_for_contact_select_type">#options_for_contact_select_type</a>
+    
+    <li ><a href="#method-i-pending_contacts">#pending_contacts</a>
+    
+    <li ><a href="#method-i-pending_contacts-3F">#pending_contacts?</a>
+    
+    <li ><a href="#method-i-pending_contacts_count">#pending_contacts_count</a>
+    
+    <li ><a href="#method-i-positive_sent_contact_actors">#positive_sent_contact_actors</a>
+    
+    <li ><a href="#method-i-relation_custom">#relation_custom</a>
+    
+    <li ><a href="#method-i-relation_customs">#relation_customs</a>
+    
+    <li ><a href="#method-i-relation_notifys">#relation_notifys</a>
+    
+    <li ><a href="#method-i-relations_for_select">#relations_for_select</a>
+    
+    <li ><a href="#method-i-relations_list">#relations_list</a>
+    
+    <li ><a href="#method-i-represented_by-3F">#represented_by?</a>
+    
+    <li ><a href="#method-i-self_contact">#self_contact</a>
+    
+    <li ><a href="#method-i-sent_active_contact_count">#sent_active_contact_count</a>
+    
+    <li ><a href="#method-i-sent_active_contact_ids">#sent_active_contact_ids</a>
+    
+    <li ><a href="#method-i-subject">#subject</a>
+    
+    <li ><a href="#method-i-suggestions">#suggestions</a>
+    
+    <li ><a href="#method-i-ties_to">#ties_to</a>
+    
+    <li ><a href="#method-i-ties_to-3F">#ties_to?</a>
+    
+    <li ><a href="#method-i-to_param">#to_param</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Actor">
+  <h1 id="class-Actor" class="class">
+    class Actor
+  </h1>
+
+  <section class="description">
+    
+<p>An {Actor} represents a social entity. This means {User individuals}, but
+also {Group groups}, departments, organizations even nations or states.</p>
+
+<p>Actors are the nodes of a social network. Two actors are linked by {Tie
+Ties}. The type of a {Tie} is a {Relation}. Each actor can define and
+customize their relations own {Relation Relations}.</p>
+
+<p>Every {Actor} has an Avatar, a {Profile} with personal or group
+information, contact data, etc.</p>
+
+<p>{Actor Actors} perform {ActivityAction actions} (like, suscribe, etc.) on
+{ActivityObject activity objects} ({Post posts}, {Comment commments},
+pictures, events..)</p>
+
+<h1 id="class-Actor-label-Actor+subtypes"><a href="Actor.html">Actor</a> subtypes<span><a href="#class-Actor-label-Actor+subtypes">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>An actor subtype is called a {SocialStream::Models::Subject Subject}.
+{SocialStream::Base} provides two actor subtypes, {User} and {Group}, but
+the application developer can define as many actor subtypes as required.
+Besides including the {SocialStream::Models::Subject} module, <a
+href="Actor.html">Actor</a> subtypes must added to
+<code>config/initializers/social_stream.rb</code></p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-action_to" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">action_to</span><span
+            class="method-args">(activity_object)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return the {ActivityAction} model to an {ActivityObject}</p>
+          
+          
+
+          
+          <div class="method-source-code" id="action_to-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 391</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">action_to</span>(<span class="ruby-identifier">activity_object</span>)
+  <span class="ruby-identifier">sent_actions</span>.<span class="ruby-identifier">received_by</span>(<span class="ruby-identifier">activity_object</span>).<span class="ruby-identifier">first</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-action_to-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">action_to!</span><span
+            class="method-args">(activity_object)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return the {ActivityAction} model to an {ActivityObject}. Create it if it
+does not exist</p>
+          
+          
+
+          
+          <div class="method-source-code" id="action_to-21-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 396</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">action_to!</span>(<span class="ruby-identifier">activity_object</span>)
+  <span class="ruby-identifier">action_to</span>(<span class="ruby-identifier">activity_object</span>) <span class="ruby-operator">||</span>
+    <span class="ruby-identifier">sent_actions</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-value">:activity_object</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">ActivityObject</span>.<span class="ruby-identifier">normalize</span>(<span class="ruby-identifier">activity_object</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-activity_relation_ids" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">activity_relation_ids</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The ids of the default {Relation Relations} for sharing an {Activity} owned
+by this {Actor}</p>
+          
+          
+
+          
+          <div class="method-source-code" id="activity_relation_ids-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 479</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">activity_relation_ids</span>
+  <span class="ruby-identifier">activity_relations</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:id</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-activity_relations" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">activity_relations</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The default {Relation Relations} for sharing an {Activity} owned by this
+{Actor}</p>
+
+<p>Activities are shared with all the contacts by default.</p>
+
+<p>You can change this behaviour with a decorator, overwriting this method.
+For example, if you want the activities shared publicly by default, create
+a decorator in app/decorators/actor_decorator.rb with</p>
+
+<pre class="ruby"><span class="ruby-constant">Actor</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword">do</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier">activity_relations</span>
+    [ <span class="ruby-constant">Relation</span><span class="ruby-operator">::</span><span class="ruby-constant">Public</span>.<span class="ruby-identifier">instance</span> ]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="activity_relations-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 472</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">activity_relations</span>
+  <span class="ruby-identifier">relations</span>.
+    <span class="ruby-identifier">allowing</span>(<span class="ruby-string">&#39;read&#39;</span>, <span class="ruby-string">&#39;activity&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-activity_relations_for" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">activity_relations_for</span><span
+            class="method-args">(subject, options = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>This method returns all the {relations Relation} that subject can choose to
+broadcast an <a href="Activity.html">Activity</a> in this {Actor}&#39;s
+wall</p>
+
+<p>See {Activity} on how they can be shared with multiple {audicences
+Audience}, which corresponds to a {Relation}.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="activity_relations_for-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 487</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">activity_relations_for</span>(<span class="ruby-identifier">subject</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Actor</span>.<span class="ruby-identifier">normalize</span>(<span class="ruby-identifier">subject</span>) <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">relation_customs</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">wrap</span>(<span class="ruby-constant">Relation</span><span class="ruby-operator">::</span><span class="ruby-constant">Public</span>.<span class="ruby-identifier">instance</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-activity_relations_for-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">activity_relations_for?</span><span
+            class="method-args">(subject, options = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Are {#activity_relations} available for subject?</p>
+          
+          
+
+          
+          <div class="method-source-code" id="activity_relations_for-3F-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 496</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">activity_relations_for?</span>(<span class="ruby-identifier">subject</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">activity_relations</span>(<span class="ruby-identifier">subject</span>, <span class="ruby-identifier">options</span>).<span class="ruby-identifier">any?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-allow-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">allow?</span><span
+            class="method-args">(subject, action, object = nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Does this {Actor} allow subject to perform action on object?</p>
+          
+          
+
+          
+          <div class="method-source-code" id="allow-3F-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 386</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">allow?</span>(<span class="ruby-identifier">subject</span>, <span class="ruby-identifier">action</span>, <span class="ruby-identifier">object</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">ties_to</span>(<span class="ruby-identifier">subject</span>).<span class="ruby-identifier">with_permissions</span>(<span class="ruby-identifier">action</span>, <span class="ruby-identifier">object</span>).<span class="ruby-identifier">any?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-as_json" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">as_json</span><span
+            class="method-args">(options)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="as_json-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 541</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">options</span>)
+  {
+    <span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">id</span>,
+    <span class="ruby-identifier">slug</span><span class="ruby-operator">:</span> <span class="ruby-identifier">slug</span>,
+    <span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">name</span>,
+    <span class="ruby-identifier">url</span><span class="ruby-operator">:</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:helper</span>].<span class="ruby-identifier">polymorphic_url</span>(<span class="ruby-identifier">subject</span>),
+    <span class="ruby-identifier">image</span><span class="ruby-operator">:</span> {
+      <span class="ruby-identifier">url</span><span class="ruby-operator">:</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:helper</span>].<span class="ruby-identifier">root_url</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">logo</span>.<span class="ruby-identifier">url</span>(<span class="ruby-value">:small</span>)
+    }
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-as_object_type" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">as_object_type</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>FIXME SocialStream::ActivityStreams::Supertype should take precedence over
+SocialStream::ActivityStreams::Subtype</p>
+          
+          
+
+          
+          <div class="method-source-code" id="as_object_type-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">as_object_type</span>
+  <span class="ruby-identifier">subtype_instance</span>.<span class="ruby-identifier">as_object_type</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-can_comment-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">can_comment?</span><span
+            class="method-args">(activity)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Is this {Actor} allowed to create a comment on activity?</p>
+
+<p>We are allowing comments from everyone signed in by now</p>
+          
+          
+
+          
+          <div class="method-source-code" id="can_comment-3F-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 503</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">can_comment?</span>(<span class="ruby-identifier">activity</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+
+  <span class="ruby-identifier">comment_relations</span>(<span class="ruby-identifier">activity</span>).<span class="ruby-identifier">any?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-comment_relations" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">comment_relations</span><span
+            class="method-args">(activity)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Are there any relations that allow this actor to create a comment on
+activity?</p>
+          
+          
+
+          
+          <div class="method-source-code" id="comment_relations-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 510</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">comment_relations</span>(<span class="ruby-identifier">activity</span>)
+  <span class="ruby-identifier">activity</span>.<span class="ruby-identifier">relations</span>.<span class="ruby-identifier">select</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Relation</span><span class="ruby-operator">::</span><span class="ruby-constant">Public</span>) } <span class="ruby-operator">|</span>
+    <span class="ruby-constant">Relation</span>.<span class="ruby-identifier">allow</span>(<span class="ruby-keyword">self</span>, <span class="ruby-string">&#39;create&#39;</span>, <span class="ruby-string">&#39;activity&#39;</span>, <span class="ruby-value">:in</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">activity</span>.<span class="ruby-identifier">relations</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-common_contacts_count" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">common_contacts_count</span><span
+            class="method-args">(subject)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Count the contacts in common between this {Actor} and subject</p>
+          
+          
+
+          
+          <div class="method-source-code" id="common_contacts_count-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 532</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">common_contacts_count</span>(<span class="ruby-identifier">subject</span>)
+  (<span class="ruby-identifier">sent_active_contact_ids</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">sent_active_contact_ids</span>).<span class="ruby-identifier">size</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-contact_actors" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">contact_actors</span><span
+            class="method-args">(options = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>All the {Actor Actors} this one has ties with:</p>
+
+<pre class="ruby"><span class="ruby-identifier">actor</span>.<span class="ruby-identifier">contact_actors</span> <span class="ruby-comment">#=&gt; array of actors that sent and receive ties from actor</span>
+</pre>
+
+<p>There are several options available to refine the query:</p>
+<dl class="rdoc-list note-list"><dt>type
+<dd>
+<p>Filter by the class of the contacts ({User}, {Group}, etc.)</p>
+
+<pre class="ruby"><span class="ruby-identifier">actor</span>.<span class="ruby-identifier">contact_actors</span>(:<span class="ruby-identifier">type</span> =<span class="ruby-operator">&gt;</span> :<span class="ruby-identifier">user</span>) <span class="ruby-comment">#=&gt; array of user actors. Exclude groups, etc.</span>
+</pre>
+</dd><dt>direction
+<dd>
+<p><code>:sent</code> leaves only the actors this one has ties to.
+<code>:received</code> gets the actors sending ties to this actor, whether
+this actor added them or not</p>
+
+<pre class="ruby"><span class="ruby-identifier">actor</span>.<span class="ruby-identifier">contact_actors</span>(:<span class="ruby-identifier">direction</span> =<span class="ruby-operator">&gt;</span> :<span class="ruby-identifier">sent</span>) <span class="ruby-comment">#=&gt; all the receivers of ties from actor</span>
+</pre>
+</dd><dt>relations
+<dd>
+<p>Restrict to ties made up with <code>relations</code>. In the case of both
+directions, only relations belonging to {Actor} are considered. It defaults
+to actor&#39;s {Relation::Custom custom relations}</p>
+
+<pre class="ruby"><span class="ruby-identifier">actor</span>.<span class="ruby-identifier">contact_actors</span>(:<span class="ruby-identifier">relations</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">2</span>]) <span class="ruby-comment">#=&gt; actors tied with relation #2</span>
+</pre>
+</dd><dt>include_self
+<dd>
+<p>False by default, do not include this actor even they have ties with
+themselves.</p>
+</dd><dt>load_subjects
+<dd>
+<p>True by default, make the queries for {<a
+href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html#label-Eager+loading+of+associations">api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html#label-Eager+loading+of+associations</a>
+eager loading} of {SocialStream::Models::Subject Subject}</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="contact_actors-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 272</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">contact_actors</span>(<span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">subject_types</span>   = <span class="ruby-constant">Array</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:type</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">subtypes</span>)
+  <span class="ruby-identifier">subject_classes</span> = <span class="ruby-identifier">subject_types</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">classify</span> }
+  
+  <span class="ruby-identifier">as</span> = <span class="ruby-constant">Actor</span>.<span class="ruby-identifier">select</span>(<span class="ruby-string">&#39;actors.*&#39;</span>).
+             <span class="ruby-comment"># PostgreSQL requires that all the columns must be included in the GROUP BY</span>
+             <span class="ruby-identifier">group</span>((<span class="ruby-constant">Actor</span>.<span class="ruby-identifier">columns</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:name</span>).<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;actors.#{ c }&quot;</span> } <span class="ruby-operator">+</span> [ <span class="ruby-string">&quot;contacts.created_at&quot;</span> ]).<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;, &quot;</span>)).
+             <span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;actors.subject_type&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">subject_classes</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:load_subjects</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:load_subjects</span>]
+    <span class="ruby-identifier">as</span> = <span class="ruby-identifier">as</span>.<span class="ruby-identifier">includes</span>(<span class="ruby-identifier">subject_types</span>)
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-comment"># A blank :direction means reciprocate contacts, there must be ties in both directions</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># This is achieved by getting the id of all the contacts that are sending ties</span>
+  <span class="ruby-comment"># Then, we filter the sent contacts query to only those contacts</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:direction</span>].<span class="ruby-identifier">blank?</span>
+    <span class="ruby-identifier">rcv_opts</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">dup</span>
+    <span class="ruby-identifier">rcv_opts</span>[<span class="ruby-value">:direction</span>] = <span class="ruby-value">:received</span>
+    <span class="ruby-identifier">rcv_opts</span>[<span class="ruby-value">:load_subjects</span>] = <span class="ruby-keyword">false</span>
+
+    <span class="ruby-comment"># Get the id of actors that are sending to this one</span>
+    <span class="ruby-identifier">sender_ids</span> = <span class="ruby-identifier">contact_actors</span>(<span class="ruby-identifier">rcv_opts</span>).<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:id</span>)
+
+    <span class="ruby-comment"># Filter the sent query with these ids</span>
+    <span class="ruby-identifier">as</span> = <span class="ruby-identifier">as</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">sender_ids</span>)
+
+    <span class="ruby-identifier">options</span>[<span class="ruby-value">:direction</span>] = <span class="ruby-value">:sent</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:direction</span>]
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:sent</span>
+    <span class="ruby-identifier">as</span> = <span class="ruby-identifier">as</span>.<span class="ruby-identifier">joins</span>(<span class="ruby-value">:received_ties</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:relation</span>).<span class="ruby-identifier">merge</span>(<span class="ruby-constant">Contact</span>.<span class="ruby-identifier">sent_by</span>(<span class="ruby-keyword">self</span>))
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:received</span>
+    <span class="ruby-identifier">as</span> = <span class="ruby-identifier">as</span>.<span class="ruby-identifier">joins</span>(<span class="ruby-value">:sent_ties</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:relation</span>).<span class="ruby-identifier">merge</span>(<span class="ruby-constant">Contact</span>.<span class="ruby-identifier">received_by</span>(<span class="ruby-keyword">self</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;How do you get here?!&quot;</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:include_self</span>].<span class="ruby-identifier">blank?</span>
+    <span class="ruby-identifier">as</span> = <span class="ruby-identifier">as</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;actors.id != ?&quot;</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:relations</span>].<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">as</span> = <span class="ruby-identifier">as</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-constant">Tie</span>.<span class="ruby-identifier">related_by</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:relations</span>]))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">as</span> = <span class="ruby-identifier">as</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-constant">Relation</span>.<span class="ruby-identifier">positive</span>)
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">as</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-contact_subjects" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">contact_subjects</span><span
+            class="method-args">(options = {}) { |as| ... }</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>All the {SocialStream::Models::Subject subjects} that send or receive at
+least one {Tie} to this {Actor}</p>
+
+<p>When passing a block, it will be evaluated for building the actors query,
+allowing to add  options before the mapping to subjects</p>
+
+<p>See <a href="Actor.html#method-i-contact_actors">contact_actors</a> for
+options</p>
+          
+          
+
+          
+          <div class="method-source-code" id="contact_subjects-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 331</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">contact_subjects</span>(<span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">as</span> = <span class="ruby-identifier">contact_actors</span>(<span class="ruby-identifier">options</span>)
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">as</span> = <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">as</span>)
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">as</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:subject</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-contact_to" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">contact_to</span><span
+            class="method-args">(subject)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return a contact to subject.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="contact_to-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 347</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">contact_to</span>(<span class="ruby-identifier">subject</span>)
+  <span class="ruby-identifier">sent_contacts</span>.<span class="ruby-identifier">received_by</span>(<span class="ruby-identifier">subject</span>).<span class="ruby-identifier">first</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-contact_to-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">contact_to!</span><span
+            class="method-args">(subject)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return a contact to subject. Create it if it does not exist</p>
+          
+          
+
+          
+          <div class="method-source-code" id="contact_to-21-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 352</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">contact_to!</span>(<span class="ruby-identifier">subject</span>)
+  <span class="ruby-identifier">contact_to</span>(<span class="ruby-identifier">subject</span>) <span class="ruby-operator">||</span>
+    <span class="ruby-identifier">sent_contacts</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">receiver_id</span><span class="ruby-operator">:</span> <span class="ruby-constant">Actor</span>.<span class="ruby-identifier">normalize_id</span>(<span class="ruby-identifier">subject</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ego_contact" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">ego_contact</span><span
+            class="method-args">()</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Actor.html#method-i-self_contact">self_contact</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-egocentric_ties" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">egocentric_ties</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The {Tie ties} sent by this actor, plus the second grade ties</p>
+          
+          
+
+          
+          <div class="method-source-code" id="egocentric_ties-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 440</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">egocentric_ties</span>
+  <span class="ruby-ivar">@egocentric_ties</span> <span class="ruby-operator">||=</span>
+    <span class="ruby-identifier">load_egocentric_ties</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-following_actor_and_self_ids" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">following_actor_and_self_ids</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>An array with the ids of {Actor Actors} followed by this {Actor} plus the
+id from this {Actor}</p>
+          
+          
+
+          
+          <div class="method-source-code" id="following_actor_and_self_ids-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 381</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">following_actor_and_self_ids</span>
+  <span class="ruby-identifier">following_actor_ids</span> <span class="ruby-operator">+</span> [ <span class="ruby-identifier">id</span> ]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-following_actor_ids" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">following_actor_ids</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>An array with the ids of {Actor Actors} followed by this {Actor}</p>
+          
+          
+
+          
+          <div class="method-source-code" id="following_actor_ids-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 372</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">following_actor_ids</span>
+  <span class="ruby-identifier">following_actor_objects</span>.
+    <span class="ruby-identifier">includes</span>(<span class="ruby-value">:actor</span>).
+    <span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:actor</span>).
+    <span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:id</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-following_actor_objects" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">following_actor_objects</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The {ActivityObject ActivityObjects} followed by this {Actor} that are
+{Actor Actors}</p>
+          
+          
+
+          
+          <div class="method-source-code" id="following_actor_objects-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 366</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">following_actor_objects</span>
+  <span class="ruby-identifier">followings</span>.
+    <span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;activity_objects.object_type&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Actor&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-mailboxer_email" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mailboxer_email</span><span
+            class="method-args">(object)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returning the email address of the model if an email should be sent for
+this object (Message or Notification). If the actor is a <a
+href="Group.html">Group</a> and has no email address, an array with the
+email of the highest rank members will be returned isntead.</p>
+
+<p>If no mail has to be sent, return nil.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="mailboxer_email-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 175</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mailboxer_email</span>(<span class="ruby-identifier">object</span>)
+  <span class="ruby-comment">#If actor has disabled the emails, return nil.</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">notify_by_email</span>
+  <span class="ruby-comment">#If actor has enabled the emails and has email</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-node">&quot;#{name} &lt;#{email}&gt;&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">email</span>.<span class="ruby-identifier">present?</span>
+  <span class="ruby-comment">#If actor is a Group, has enabled emails but no mail we return the highest_rank ones.</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">group</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">subject</span>).<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Group</span>
+    <span class="ruby-identifier">emails</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">group</span>.<span class="ruby-identifier">relation_notifys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">relation</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">receivers</span> = <span class="ruby-identifier">group</span>.<span class="ruby-identifier">contact_actors</span>(<span class="ruby-value">:direction</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:sent</span>, <span class="ruby-value">:relations</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">relation</span>)
+      <span class="ruby-identifier">receivers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">receiver</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">Actor</span>.<span class="ruby-identifier">normalize</span>(<span class="ruby-identifier">receiver</span>).<span class="ruby-identifier">subject_type</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-string">&quot;User&quot;</span>)
+
+        <span class="ruby-identifier">receiver_emails</span> = <span class="ruby-identifier">receiver</span>.<span class="ruby-identifier">mailboxer_email</span>(<span class="ruby-identifier">object</span>)
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">receiver_emails</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-constant">String</span>
+          <span class="ruby-identifier">emails</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">receiver_emails</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span>
+          <span class="ruby-identifier">receiver_emails</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">receiver_email</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">emails</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">receiver_email</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">emails</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-notification_settings" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">notification_settings</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              
+            </div>
+          
+
+          
+          <div class="method-source-code" id="notification_settings-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 553</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">notification_settings</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:notification_settings</span>, <span class="ruby-constant">SocialStream</span>.<span class="ruby-identifier">default_notification_settings</span>) <span class="ruby-keyword">unless</span> <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-options_for_contact_select" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">options_for_contact_select</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return an object of choices suitable for the contact add button or modal</p>
+          
+          
+
+          
+          <div class="method-source-code" id="options_for_contact_select-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 238</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">options_for_contact_select</span>
+  <span class="ruby-identifier">relations_for_select</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> [ <span class="ruby-identifier">r</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">r</span>.<span class="ruby-identifier">id</span> ] }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-options_for_contact_select_simple-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">options_for_contact_select_simple?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Options for contact select are simple</p>
+          
+          
+
+          
+          <div class="method-source-code" id="options_for_contact_select_simple-3F-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">options_for_contact_select_simple?</span>
+  <span class="ruby-identifier">relations_list</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-options_for_contact_select_type" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">options_for_contact_select_type</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns the type for contact select, :simple or :multiple</p>
+          
+          
+
+          
+          <div class="method-source-code" id="options_for_contact_select_type-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">options_for_contact_select_type</span>
+  <span class="ruby-identifier">options_for_contact_select_simple?</span> <span class="ruby-operator">?</span> <span class="ruby-value">:simple</span> <span class="ruby-operator">:</span> <span class="ruby-value">:multiple</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-pending_contacts" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">pending_contacts</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Build a new {Contact} from each that has not inverse</p>
+          
+          
+
+          
+          <div class="method-source-code" id="pending_contacts-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 524</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pending_contacts</span>
+  <span class="ruby-identifier">received_contacts</span>.<span class="ruby-identifier">pending</span>.<span class="ruby-identifier">includes</span>(<span class="ruby-value">:inverse</span>).<span class="ruby-identifier">all</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">c</span>.<span class="ruby-identifier">inverse</span> <span class="ruby-operator">||</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">receiver</span>.<span class="ruby-identifier">contact_to!</span>(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">sender</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-pending_contacts-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">pending_contacts?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="pending_contacts-3F-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 519</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pending_contacts?</span>
+  <span class="ruby-identifier">pending_contacts_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-pending_contacts_count" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">pending_contacts_count</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="pending_contacts_count-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 515</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pending_contacts_count</span>
+  <span class="ruby-identifier">received_contacts</span>.<span class="ruby-identifier">not_reflexive</span>.<span class="ruby-identifier">pending</span>.<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-positive_sent_contact_actors" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">positive_sent_contact_actors</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The actors this one has established positive ties with</p>
+          
+          
+
+          
+          <div class="method-source-code" id="positive_sent_contact_actors-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 342</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">positive_sent_contact_actors</span>
+  <span class="ruby-identifier">sent_contacts</span>.<span class="ruby-identifier">joins</span>(<span class="ruby-identifier">ties</span><span class="ruby-operator">:</span> <span class="ruby-value">:relation</span>).<span class="ruby-identifier">merge</span>(<span class="ruby-constant">Relation</span>.<span class="ruby-identifier">positive</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-relation_custom" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">relation_custom</span><span
+            class="method-args">(name)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>A given relation defined and managed by this actor</p>
+          
+          
+
+          
+          <div class="method-source-code" id="relation_custom-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">relation_custom</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">relation_customs</span>.<span class="ruby-identifier">find_by_name</span>(<span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-relation_customs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">relation_customs</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>All the {Relation relations} defined by this {Actor}</p>
+          
+          
+
+          
+          <div class="method-source-code" id="relation_customs-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 209</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">relation_customs</span>
+  <span class="ruby-identifier">relations</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;Relation::Custom&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-relation_notifys" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">relation_notifys</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>All {Relation relations} with the &#39;notify&#39; permission</p>
+          
+          
+
+          
+          <div class="method-source-code" id="relation_notifys-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">relation_notifys</span>
+  <span class="ruby-identifier">relations</span>.<span class="ruby-identifier">joins</span>(<span class="ruby-value">:relation_permissions</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:permission</span>).<span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;permissions.action&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;notify&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-relations_for_select" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">relations_for_select</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The relations offered in the “Add contact” button when subjects add new
+contacts</p>
+          
+          
+
+          
+          <div class="method-source-code" id="relations_for_select-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 233</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">relations_for_select</span>
+  <span class="ruby-identifier">relations_list</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-relations_list" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">relations_list</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The relations that will appear in privacy forms</p>
+
+<p>They usually include {Relation::Custom} but may also include other
+system-defined relations that are not editable but appear in add contact
+buttons</p>
+          
+          
+
+          
+          <div class="method-source-code" id="relations_list-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">relations_list</span>
+  <span class="ruby-constant">Relation</span>.<span class="ruby-identifier">system_list</span>(<span class="ruby-identifier">subject</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">relation_customs</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-represented_by-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">represented_by?</span><span
+            class="method-args">(subject)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Can this actor be represented by subject. Does she has permissions for it?</p>
+          
+          
+
+          
+          <div class="method-source-code" id="represented_by-3F-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 447</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">represented_by?</span>(<span class="ruby-identifier">subject</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">blank?</span>
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">normalize</span>(<span class="ruby-identifier">subject</span>) <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span> <span class="ruby-operator">||</span>
+    <span class="ruby-identifier">sent_ties</span>.
+      <span class="ruby-identifier">merge</span>(<span class="ruby-constant">Contact</span>.<span class="ruby-identifier">received_by</span>(<span class="ruby-identifier">subject</span>)).
+      <span class="ruby-identifier">joins</span>(<span class="ruby-value">:relation</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:permissions</span>).
+      <span class="ruby-identifier">merge</span>(<span class="ruby-constant">Permission</span>.<span class="ruby-identifier">represent</span>).
+      <span class="ruby-identifier">any?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-self_contact" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">self_contact</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The {Contact} of this {Actor} to self (totally close!)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="self_contact-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 358</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">self_contact</span>
+  <span class="ruby-identifier">contact_to!</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Actor.html#method-i-ego_contact">ego_contact</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sent_active_contact_count" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sent_active_contact_count</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="sent_active_contact_count-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 401</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sent_active_contact_count</span>
+  <span class="ruby-identifier">sent_contacts</span>.<span class="ruby-identifier">active</span>.<span class="ruby-identifier">count</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sent_active_contact_ids" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sent_active_contact_ids</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="sent_active_contact_ids-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 405</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sent_active_contact_ids</span>
+  <span class="ruby-ivar">@sent_active_contact_ids</span> <span class="ruby-operator">||=</span>
+    <span class="ruby-identifier">load_sent_active_contact_ids</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-subject" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">subject</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The subject instance for this actor</p>
+          
+          
+
+          
+          <div class="method-source-code" id="subject-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">subject</span>
+  <span class="ruby-identifier">subtype_instance</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-suggestions" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">suggestions</span><span
+            class="method-args">(size = 1)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>By now, it returns a suggested {Contact} to another {Actor} without any
+current {Tie}</p>
+
+<p>Suggested actor types can be configured in SocialStream.suggestion_models
+in  config/initializers/social_stream.rb</p>
+
+<p>@return [Contact]</p>
+          
+          
+
+          
+          <div class="method-source-code" id="suggestions-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 416</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">suggestions</span>(<span class="ruby-identifier">size</span> = <span class="ruby-value">1</span>)
+  <span class="ruby-identifier">candidates</span> =
+    <span class="ruby-constant">Actor</span>.
+      <span class="ruby-identifier">where</span>(<span class="ruby-identifier">subject_type</span><span class="ruby-operator">:</span> <span class="ruby-constant">SocialStream</span>.<span class="ruby-identifier">suggested_models</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">classify</span> }).
+      <span class="ruby-identifier">where</span>(<span class="ruby-constant">Actor</span>.<span class="ruby-identifier">arel_table</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">not_in</span>(<span class="ruby-identifier">sent_active_contact_ids</span> <span class="ruby-operator">+</span> [<span class="ruby-identifier">id</span>]))
+
+  <span class="ruby-identifier">size</span>.<span class="ruby-identifier">times</span>.<span class="ruby-identifier">map</span> {
+    <span class="ruby-identifier">candidates</span>.<span class="ruby-identifier">delete_at</span> <span class="ruby-identifier">rand</span>(<span class="ruby-identifier">candidates</span>.<span class="ruby-identifier">size</span>)
+  }.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">contact_to!</span> <span class="ruby-identifier">a</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ties_to" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ties_to</span><span
+            class="method-args">(subject)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Set of ties sent by this actor received by subject</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ties_to-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 430</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ties_to</span>(<span class="ruby-identifier">subject</span>)
+  <span class="ruby-identifier">sent_ties</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-constant">Contact</span>.<span class="ruby-identifier">received_by</span>(<span class="ruby-identifier">subject</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ties_to-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ties_to?</span><span
+            class="method-args">(subject)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Is there any {Tie} sent by this actor and received by subject</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ties_to-3F-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 435</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ties_to?</span>(<span class="ruby-identifier">subject</span>)
+  <span class="ruby-identifier">ties_to</span>(<span class="ruby-identifier">subject</span>).<span class="ruby-identifier">present?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_param" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_param</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Use slug as parameter</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_param-source">
+            <pre><span class="ruby-comment"># File app/models/actor.rb, line 537</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_param</span>
+  <span class="ruby-identifier">slug</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

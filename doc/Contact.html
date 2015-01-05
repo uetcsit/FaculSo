@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Contact - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">ActiveRecord::Base
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-action">#action</a>
+    
+    <li ><a href="#method-i-established-3F">#established?</a>
+    
+    <li ><a href="#method-i-inverse-21">#inverse!</a>
+    
+    <li ><a href="#method-i-options_for_select">#options_for_select</a>
+    
+    <li ><a href="#method-i-options_for_select_type">#options_for_select_type</a>
+    
+    <li ><a href="#method-i-positive_replied-3F">#positive_replied?</a>
+    
+    <li ><a href="#method-i-receiver_subject">#receiver_subject</a>
+    
+    <li ><a href="#method-i-reflexive-3F">#reflexive?</a>
+    
+    <li ><a href="#method-i-replied-3F">#replied?</a>
+    
+    <li ><a href="#method-i-sender_subject">#sender_subject</a>
+    
+    <li ><a href="#method-i-sent-3F">#sent?</a>
+    
+    <li ><a href="#method-i-status">#status</a>
+    
+    <li ><a href="#method-i-user_author">#user_author</a>
+    
+    <li ><a href="#method-i-user_author-3D">#user_author=</a>
+    
+    <li ><a href="#method-i-verb">#verb</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Contact">
+  <h1 id="class-Contact" class="class">
+    class Contact
+  </h1>
+
+  <section class="description">
+    
+<p>A {Contact} is an ordered pair of {Actor Actors}, and therefore two
+{SocialStream::Models::Subject Subjects}.</p>
+
+<p>{Contact Contacts} are created at convenience (in the case of
+{Actor#suggestions suggestions}, for instance), and they do not mean that
+there is a real link between those two {SocialStream::Models::Subject
+Subjects}. Link existance is stored as a {Tie}. When Alice adds Bob as
+contact, a new {Tie} is created with the {Contact} from Alice to Bob and
+the {Relation} that Alice chose.</p>
+
+<h2 id="class-Contact-label-Inverse+Contacts">Inverse Contacts<span><a href="#class-Contact-label-Inverse+Contacts">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Alice has a {Contact} to Bob. The inverse is the {Contact} from {Bob} to
+{Alice}. Inverse contacts are used to check if contacts are replied, for
+instance, if Bob added Alice as contact after she did so.</p>
+
+<p>Again, the <a href="Contact.html">Contact</a> from Bob to Alice must have
+positive {Tie ties} to be active.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-message" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">message</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>Send a message when this contact is created or updated</p>
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-action" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">action</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Is this {Contact} <code>new</code> or <code>edit</code> for
+{SocialStream::Models::Subject subject} ?</p>
+
+<p>action is <code>new</code> when, despite of being created, it has not {Tie
+ties} or it has a {Tie} with a {Relation::Reject reject relation}.</p>
+
+<p>The contact&#39;s action is <code>edit</code> when it has any {Tie} with a
+{Relation::Custom custom relation} or a {Relation::Public public relation}</p>
+          
+          
+
+          
+          <div class="method-source-code" id="action-source">
+            <pre><span class="ruby-comment"># File app/models/contact.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">action</span>
+  <span class="ruby-identifier">sent?</span> <span class="ruby-operator">?</span> <span class="ruby-string">&#39;edit&#39;</span> <span class="ruby-operator">:</span> ( <span class="ruby-identifier">replied?</span> <span class="ruby-operator">?</span> <span class="ruby-string">&#39;reply&#39;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&#39;new&#39;</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-established-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">established?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Has this {Contact} any {Tie}?</p>
+          
+          
+
+          
+          <div class="method-source-code" id="established-3F-source">
+            <pre><span class="ruby-comment"># File app/models/contact.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">established?</span>
+  <span class="ruby-identifier">ties_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-inverse-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">inverse!</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Find or create the inverse {Contact}</p>
+          
+          
+
+          
+          <div class="method-source-code" id="inverse-21-source">
+            <pre><span class="ruby-comment"># File app/models/contact.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inverse!</span>
+  <span class="ruby-identifier">inverse</span> <span class="ruby-operator">||</span>
+    <span class="ruby-identifier">receiver</span>.<span class="ruby-identifier">contact_to!</span>(<span class="ruby-identifier">sender</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-options_for_select" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">options_for_select</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return an object of choices suitable for the contact add button</p>
+          
+          
+
+          
+          <div class="method-source-code" id="options_for_select-source">
+            <pre><span class="ruby-comment"># File app/models/contact.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">options_for_select</span>
+  <span class="ruby-identifier">sender</span>.<span class="ruby-identifier">options_for_contact_select</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-options_for_select_type" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">options_for_select_type</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Options for select are simple or multiple</p>
+          
+          
+
+          
+          <div class="method-source-code" id="options_for_select_type-source">
+            <pre><span class="ruby-comment"># File app/models/contact.rb, line 191</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">options_for_select_type</span>
+  <span class="ruby-identifier">sender</span>.<span class="ruby-identifier">options_for_contact_select_type</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-positive_replied-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">positive_replied?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="positive_replied-3F-source">
+            <pre><span class="ruby-comment"># File app/models/contact.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">positive_replied?</span>
+  <span class="ruby-identifier">inverse_id</span>.<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">positive</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">inverse</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">any?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-receiver_subject" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">receiver_subject</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="receiver_subject-source">
+            <pre><span class="ruby-comment"># File app/models/contact.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">receiver_subject</span>
+  <span class="ruby-identifier">receiver</span>.<span class="ruby-identifier">subject</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-reflexive-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">reflexive?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Does this {Contact} have the same sender and receiver?</p>
+          
+          
+
+          
+          <div class="method-source-code" id="reflexive-3F-source">
+            <pre><span class="ruby-comment"># File app/models/contact.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reflexive?</span>
+  <span class="ruby-identifier">sender_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">receiver_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-replied-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">replied?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The {Contact} in the other way is established</p>
+          
+          
+
+          
+          <div class="method-source-code" id="replied-3F-source">
+            <pre><span class="ruby-comment"># File app/models/contact.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">replied?</span>
+  <span class="ruby-identifier">inverse_id</span>.<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span>
+    <span class="ruby-identifier">inverse</span>.<span class="ruby-identifier">ties_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sender_subject" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sender_subject</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="sender_subject-source">
+            <pre><span class="ruby-comment"># File app/models/contact.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sender_subject</span>
+  <span class="ruby-identifier">sender</span>.<span class="ruby-identifier">subject</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sent-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sent?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The sender of this {Contact} has establised positive sent to the receiver</p>
+
+<p>That means that there exists at least one {Tie} with a positive relation
+within them</p>
+          
+          
+
+          
+          <div class="method-source-code" id="sent-3F-source">
+            <pre><span class="ruby-comment"># File app/models/contact.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sent?</span>
+  <span class="ruby-identifier">ties_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">relations</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Relation</span>.<span class="ruby-identifier">positive_names</span>).<span class="ruby-identifier">any?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-status" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">status</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="status-source">
+            <pre><span class="ruby-comment"># File app/models/contact.rb, line 174</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">status</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">action</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;edit&#39;</span>
+    <span class="ruby-identifier">ties</span>.<span class="ruby-identifier">includes</span>(<span class="ruby-value">:relation</span>).<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:relation_name</span>).<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;, &quot;</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-node">&quot;contact.#{ action }.link&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-user_author" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">user_author</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Record who creates ties in behalf of a group or organization</p>
+
+<p>Defaults to the sender actor, if it is a user</p>
+          
+          
+
+          
+          <div class="method-source-code" id="user_author-source">
+            <pre><span class="ruby-comment"># File app/models/contact.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">user_author</span>
+  <span class="ruby-ivar">@user_author</span> <span class="ruby-operator">||</span>
+    <span class="ruby-identifier">build_user_author</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-user_author-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">user_author=</span><span
+            class="method-args">(subject)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Set who creates ties in behalf of a group or organization</p>
+          
+          
+
+          
+          <div class="method-source-code" id="user_author-3D-source">
+            <pre><span class="ruby-comment"># File app/models/contact.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">user_author=</span> <span class="ruby-identifier">subject</span>
+  <span class="ruby-ivar">@user_author</span> = (<span class="ruby-identifier">subject</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Actor</span>.<span class="ruby-identifier">normalize</span>(<span class="ruby-identifier">subject</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-verb" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">verb</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The {ActivityVerb} corresponding to this {Contact}. If this contact is
+pending, the other one was establised already, so this is going to
+“make-friend”. If it is not pending, the contact in the other way was not
+established, so this is following</p>
+          
+          
+
+          
+          <div class="method-source-code" id="verb-source">
+            <pre><span class="ruby-comment"># File app/models/contact.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">verb</span>
+  <span class="ruby-identifier">replied?</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;make-friend&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;follow&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

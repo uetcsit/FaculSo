@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Tie - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#class-Tie-label-Authorization">Authorization</a>
+    <li><a href="#class-Tie-label-Scopes">Scopes</a>
+  </ul>
+</div>
+
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">ActiveRecord::Base
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-bidirectional-3F">#bidirectional?</a>
+    
+    <li ><a href="#method-i-positive-3F">#positive?</a>
+    
+    <li ><a href="#method-i-positive_replied-3F">#positive_replied?</a>
+    
+    <li ><a href="#method-i-receiver_subject">#receiver_subject</a>
+    
+    <li ><a href="#method-i-relation_belongs_to_sender-3F">#relation_belongs_to_sender?</a>
+    
+    <li ><a href="#method-i-relation_name">#relation_name</a>
+    
+    <li ><a href="#method-i-sender_subject">#sender_subject</a>
+    
+    <li ><a href="#method-i-set_follow_action">#set_follow_action</a>
+    
+    <li ><a href="#method-i-unset_follow_action">#unset_follow_action</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Tie">
+  <h1 id="class-Tie" class="class">
+    class Tie
+  </h1>
+
+  <section class="description">
+    
+<h1 id="class-Tie-label-Authorization">Authorization<span><a href="#class-Tie-label-Authorization">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>When an {Actor} establishes a {Tie} with other, she is granting a set of
+{Permission Permissions} to them (posting to her wall, reading her posts,
+etc..) The set of {Permission Permissions} granted are associated with the
+{Relation} of the {Tie}.</p>
+
+<h1 id="class-Tie-label-Scopes">Scopes<span><a href="#class-Tie-label-Scopes">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>There are several scopes defined:</p>
+<dl class="rdoc-list note-list"><dt>sent_by(actor)
+<dd>
+<p>ties whose sender is actor</p>
+</dd><dt>received_by(actor)
+<dd>
+<p>ties whose receiver is actor</p>
+</dd><dt>sent_or_received_by(actor)
+<dd>
+<p>the union of the former</p>
+</dd><dt>related_by(relation)
+<dd>
+<p>ties with this relation. Accepts relation, <a
+href="Tie.html#method-i-relation_name">#relation_name</a>, integer, array</p>
+</dd></dl>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-bidirectional-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">bidirectional?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>This {Tie} is {#positive? positive} and {#positive_replied? positive
+replied}</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bidirectional-3F-source">
+            <pre><span class="ruby-comment"># File app/models/tie.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bidirectional?</span>
+  <span class="ruby-identifier">positive?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">positive_replied?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-positive-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">positive?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The {Tie} is positive if its {Relation} is</p>
+          
+          
+
+          
+          <div class="method-source-code" id="positive-3F-source">
+            <pre><span class="ruby-comment"># File app/models/tie.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">positive?</span>
+  <span class="ruby-identifier">relation</span>.<span class="ruby-identifier">positive?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-positive_replied-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">positive_replied?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Does this {Tie} have positive {Tie ties} in the other way?</p>
+          
+          
+
+          
+          <div class="method-source-code" id="positive_replied-3F-source">
+            <pre><span class="ruby-comment"># File app/models/tie.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">positive_replied?</span>
+  <span class="ruby-identifier">contact</span>.<span class="ruby-identifier">positive_replied?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-receiver_subject" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">receiver_subject</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="receiver_subject-source">
+            <pre><span class="ruby-comment"># File app/models/tie.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">receiver_subject</span>
+  <span class="ruby-identifier">receiver</span>.<span class="ruby-identifier">subject</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-relation_belongs_to_sender-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">relation_belongs_to_sender?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="relation_belongs_to_sender-3F-source">
+            <pre><span class="ruby-comment"># File app/models/tie.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">relation_belongs_to_sender?</span>
+    <span class="ruby-identifier">relation</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Relation</span><span class="ruby-operator">::</span><span class="ruby-constant">Single</span>) <span class="ruby-operator">||</span>
+      <span class="ruby-identifier">contact</span>.<span class="ruby-identifier">sender_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">relation</span>.<span class="ruby-identifier">actor_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-relation_name" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">relation_name</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="relation_name-source">
+            <pre><span class="ruby-comment"># File app/models/tie.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">relation_name</span>
+  <span class="ruby-identifier">relation</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:name</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sender_subject" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sender_subject</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="sender_subject-source">
+            <pre><span class="ruby-comment"># File app/models/tie.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sender_subject</span>
+  <span class="ruby-identifier">sender</span>.<span class="ruby-identifier">subject</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_follow_action" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_follow_action</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>after_create callback</p>
+
+<p>Create the {Actor}&#39;s follower_count</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set_follow_action-source">
+            <pre><span class="ruby-comment"># File app/models/tie.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_follow_action</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">contact</span>.<span class="ruby-identifier">reflexive?</span> <span class="ruby-operator">||</span>
+            <span class="ruby-operator">!</span><span class="ruby-identifier">relation</span>.<span class="ruby-identifier">permissions</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-constant">Permission</span>.<span class="ruby-identifier">follow</span>.<span class="ruby-identifier">first</span>)
+
+  <span class="ruby-identifier">action</span> = <span class="ruby-identifier">sender</span>.<span class="ruby-identifier">action_to!</span>(<span class="ruby-identifier">receiver</span>)
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">action</span>.<span class="ruby-identifier">follow?</span>
+
+  <span class="ruby-identifier">action</span>.<span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:follow</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-unset_follow_action" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">unset_follow_action</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>after_remove callback</p>
+
+<p>Decrement the {Actor}&#39;s follower_count</p>
+
+<p>This method needs to be public to be call from {Contact}&#39;s after_remove
+callback</p>
+          
+          
+
+          
+          <div class="method-source-code" id="unset_follow_action-source">
+            <pre><span class="ruby-comment"># File app/models/tie.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unset_follow_action</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">contact</span>.<span class="ruby-identifier">reflexive?</span> <span class="ruby-operator">||</span>
+            <span class="ruby-operator">!</span><span class="ruby-identifier">relation</span>.<span class="ruby-identifier">permissions</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-constant">Permission</span>.<span class="ruby-identifier">follow</span>.<span class="ruby-identifier">first</span>)
+
+  <span class="ruby-comment"># Because we allow several ties from the same sender to the same receiver,</span>
+  <span class="ruby-comment"># we check the receiver does not still have a follower tie from this sender</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Tie</span>.<span class="ruby-identifier">sent_by</span>(<span class="ruby-identifier">sender</span>).
+                <span class="ruby-identifier">received_by</span>(<span class="ruby-identifier">receiver</span>).
+                <span class="ruby-identifier">with_permissions</span>(<span class="ruby-string">&#39;follow&#39;</span>, <span class="ruby-keyword">nil</span>).
+                <span class="ruby-identifier">present?</span>
+
+  <span class="ruby-identifier">action</span> = <span class="ruby-identifier">sender</span>.<span class="ruby-identifier">action_to!</span>(<span class="ruby-identifier">receiver</span>)
+
+  <span class="ruby-identifier">action</span>.<span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:follow</span>, <span class="ruby-keyword">false</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
